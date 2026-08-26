@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Environments and editors
+.venv/
+venv/
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Credentials and machine-local agent settings
+.env
+.env.*
+!.env.example
+*.local
+.claude/settings.local.json
+
+# Generated datasets, weights, runs, and reports
+data/generated/
+checkpoints/
+artifacts/
+runs/
+logs/
+*.npy
+*.npz
+*.pt
+*.pth
+*.onnx
+*.log
+events.out.tfevents.*
+

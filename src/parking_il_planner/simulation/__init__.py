@@ -1,0 +1,2 @@
+"""Occupancy-grid scene rendering."""
+

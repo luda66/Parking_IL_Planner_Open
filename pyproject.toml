@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parking-il-planner"
+version = "0.1.0"
+description = "An imitation-learning motion planner for automatic parking"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "luda66"}]
+keywords = ["automatic-parking", "imitation-learning", "motion-planning", "reeds-shepp"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24,<3",
+  "opencv-python-headless>=4.8,<5",
+  "Pillow>=10,<12",
+  "matplotlib>=3.7,<4",
+]
+
+[project.optional-dependencies]
+ml = [
+  "torch>=2.0",
+  "torchvision>=0.15",
+]
+dev = [
+  "build>=1.2",
+  "pytest>=7.4",
+  "ruff>=0.8",
+]
+
+[project.scripts]
+parking-il = "parking_il_planner.cli:main"
+
+[project.urls]
+Repository = "https://github.com/luda66/Parking_IL_Planner_Open"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]
