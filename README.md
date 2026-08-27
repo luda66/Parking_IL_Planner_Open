@@ -34,6 +34,18 @@ The discrete actions are stop, forward, reverse, left-forward, left-reverse,
 right-forward, and right-reverse. Vehicle poses use the rear-axle center as their
 reference point.
 
+## Closed-loop demos
+
+Representative neural-controller rollouts selected from historical evaluation.
+Red is the ego vehicle, green is the target pose, and blue marks obstacles.
+
+| Vertical parking · scenario 38555 | Parallel parking · scenario 38740 | Extreme-start vertical parking · scenario 30348 |
+|:---:|:---:|:---:|
+| ![Vertical parking closed-loop rollout](assets/demos/vertical-parking.gif) | ![Parallel parking closed-loop rollout](assets/demos/parallel-parking.gif) | ![Extreme-start vertical parking closed-loop rollout](assets/demos/extreme-start-vertical-parking.gif) |
+
+These animations are qualitative examples rather than an aggregate benchmark.
+See the [evaluation protocol](docs/evaluation-protocol.md) for reporting rules.
+
 ## Quick start
 
 Python 3.10 or newer is required.

@@ -14,6 +14,18 @@
 就会改变，误差可能持续累积。因此本项目严格区分开环分类评估与闭环驾驶评估，
 并保留 DAgger 等未达到预期的实验与限制说明。
 
+## 闭环泊车效果
+
+以下是历史评估中筛选出的纯神经网络控制器闭环 rollout。红色表示自车，绿色表示
+目标位姿，蓝色表示障碍物。
+
+| 垂直泊入 · 场景 38555 | 水平泊入 · 场景 38740 | 极限初始位置垂直泊入 · 场景 30348 |
+|:---:|:---:|:---:|
+| ![垂直泊入闭环效果](assets/demos/vertical-parking.gif) | ![水平泊入闭环效果](assets/demos/parallel-parking.gif) | ![极限初始位置垂直泊入闭环效果](assets/demos/extreme-start-vertical-parking.gif) |
+
+这些动图用于定性展示，不代表整体成功率。定量结果必须遵守
+[评估协议](docs/evaluation-protocol.md)中的统计口径。
+
 ## 快速开始
 
 ```bash
